@@ -1,0 +1,22 @@
+VOLUME_ROOT=/volumes
+
+help:
+	@echo -e "To manege $(NAME):\n  make help\n  make run\n  make start\n  make stop\n  make restart\n  make logs\n  make rm\n  make distroy\n"
+
+start:
+	docker start $(NAME)
+
+stop:
+	docker stop $(NAME)
+
+restart:
+	docker restart $(NAME)
+
+logs:
+	docker logs -f $(NAME)
+
+rm:stop
+	docker rm $(NAME)
+
+distroy:rm
+	rm -rf $(VOLUME)
