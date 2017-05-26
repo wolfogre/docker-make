@@ -21,7 +21,7 @@ mkdir my-mysql
 ### 2. Copy a sample Makefile to my-mysql
 
 ```bash
-cp sample1/Makefile my-mysql/
+cp sample/Makefile my-mysql/
 ```
 
 ### 3. Edit the Makefile in my-mysql
