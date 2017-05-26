@@ -1,0 +1,12 @@
+
+	make help
+	make run
+	make start
+	make stop
+	make restart
+	make logs
+	make exec
+	make rm
+	make distroy
+See more: https://github.com/wolfogre/docker-make
+

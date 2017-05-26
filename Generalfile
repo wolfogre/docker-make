@@ -1,7 +1,7 @@
 VOLUME_ROOT=/volumes
 
 help:
-	@echo -e "To manege $(NAME):\n  make help\n  make run\n  make start\n  make stop\n  make restart\n  make logs\n  make rm\n  make distroy\n"
+	@cat ../Helpfile
 
 start:
 	docker start $(NAME)
