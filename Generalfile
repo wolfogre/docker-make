@@ -4,22 +4,23 @@ help:
 	@cat ../Helpfile
 
 start:
-	docker start $(NAME)
+	docker start ${NAME}
 
 stop:
-	docker stop $(NAME)
+	docker stop ${NAME}
 
 restart:
-	docker restart $(NAME)
+	docker restart ${NAME}
 
 logs:
-	docker logs -f $(NAME)
+	docker logs -f ${NAME}
 
 exec:
-	docker exec -it $(NAME) sh
+	docker exec -it ${NAME} sh
 
 rm:stop
-	docker rm $(NAME)
+	docker rm ${NAME}
 
-distroy:rm
-	rm -rf $(VOLUME)
+distroy:stop
+	docker rm -v ${NAME}
+	rm -rf ${VOLUME}

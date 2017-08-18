@@ -40,7 +40,7 @@ VOLUME=$(VOLUME_ROOT)/$(NAME)
 include ../Generalfile
 
 run:
-	docker run --name=$(NAME) -v $(VOLUME)/var/lib/mysql:/var/lib/mysql -d mysql
+	docker run --name=$(NAME) -v $(VOLUME)/var/lib/mysql:/var/lib/mysql -p 3306:3306 -d mysql
 ```
 
 ### 4. Run it!
